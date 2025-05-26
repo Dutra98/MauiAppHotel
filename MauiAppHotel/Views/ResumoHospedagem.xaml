@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.ResumoHospedagem"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="GreenYellow">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25"
+                             Spacing="20"
+                             VerticalOptions="CenterAndExpand">
+
+            <Label Text="Resumo da Hospedagem"
+                   FontSize="50"
+                   FontAttributes="Bold"
+                   FontFamily="Kalam"
+                   TextColor="{StaticResource Primary}"
+                   HorizontalTextAlignment="Center" />
+
+            <Frame BackgroundColor="Black"
+                   CornerRadius="12"
+                   Padding="15"
+                   HasShadow="True">
+                <Label x:Name="lblSuite"
+                       Text="Suíte: Super Luxo"
+                       FontSize="20"
+                       TextColor="White"
+                       FontAttributes="Bold" />
+            </Frame>
+
+            <Frame BackgroundColor="Black"
+                   CornerRadius="12"
+                   Padding="15"
+                   HasShadow="True">
+                <Label x:Name="lblHospedes"
+                       Text="Adultos: 2 | Crianças: 1"
+                       FontSize="18"
+                       TextColor="White" />
+            </Frame>
+
+            <Frame BackgroundColor="Black"
+                   CornerRadius="12"
+                   Padding="15"
+                   HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <Label x:Name="lblCheckin"
+                           Text="Check-in: 27/05/2024"
+                           TextColor="White" />
+                    <Label x:Name="lblCheckout"
+                           Text="Check-out: 30/05/2024"
+                           TextColor="White" />
+                    <Label x:Name="lblNoites"
+                           Text="Total de noites: 3"
+                           TextColor="White" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="Black"
+                   CornerRadius="12"
+                   Padding="15"
+                   HasShadow="True">
+                <Label x:Name="lblValor"
+                       Text="Valor Total: R$ 750,00"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center" />
+            </Frame>
+
+            <Button Text="Finalizar"
+                    BackgroundColor="#9370DB"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    Padding="12"
+                    HorizontalOptions="Center"
+                    WidthRequest="200"
+                    Clicked="OnFinalizarClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
